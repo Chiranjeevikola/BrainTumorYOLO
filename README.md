@@ -1,2 +1,59 @@
-# BrainTumorYOLO
-Diagnosis of Brain Tumor using LightWeight DL model with Fine Tuning  approach
+This MATLAB code performs brain tumor classification using a combination of convolutional neural networks (CNNs) and YOLOv4 for object detection. Below is a step-by-step explanation:
+
+### 1. Initial Setup
+- The code clears all previous variables (`clear all`), closes figures (`close all`), and clears the command window (`clc`).
+- An image datastore (`imds`) is created to load images from a specified directory, with the labels derived from folder names. The data is split into training (80%) and testing (20%) datasets.
+
+### 2. CNN Architecture Definition
+- A CNN model is defined with the following layers:
+  - **Input Layer:** Takes images of size [200, 128, 3].
+  - **Convolutional Layers:** Feature extraction is performed using convolutional layers with varying filter sizes.
+  - **Batch Normalization Layers:** Normalize the activations and gradient propagation.
+  - **ReLU Layers:** Apply non-linearity to the network.
+  - **Addition Layer and Pooling Layer:** Used to merge and reduce the spatial dimensions.
+  - **Fully Connected Layer:** Connects to the output classification.
+  - **Softmax Layer:** Converts the output to probabilities.
+  - **Classification Layer:** Produces the final prediction.
+
+### 3. Layer Graph and Connections
+- The layers are sequentially connected using `layerGraph`, and a skip connection is added to introduce a residual learning path, improving gradient flow.
+
+### 4. Training the Network
+- Training options are defined, including the optimizer (`adam`), batch size, learning rate, and maximum epochs. 
+- The network is trained using `trainNetwork`, which updates weights based on training data.
+
+### 5. Image Preprocessing for Prediction
+- The user is prompted to select an image, which is read and preprocessed:
+  - Converted to grayscale if needed.
+  - Resized to the input size of the CNN.
+  - Median filtering is applied to remove noise.
+
+### 6. Tumor Detection using Region Properties
+- The preprocessed image is binarized to identify regions.
+- `regionprops` is used to compute the solidity and area of connected regions.
+- High-density regions are considered potential tumors.
+- Morphological operations further enhance the detected tumor region.
+
+### 7. YOLOv4 Integration for Object Detection
+- A pretrained YOLOv4 model (`YOLOv4-coco`) is loaded.
+- The detected tumor is isolated, dilated, and displayed.
+
+### 8. Feature Extraction
+- Features such as contrast, correlation, energy, homogeneity, mean, standard deviation, entropy, and more are computed.
+- These features could be used for further classification tasks.
+
+### 9. Classification
+- The trained CNN model classifies the tumor based on the input image.
+- A message box displays the classification result.
+
+### 10. Visualization
+- Several figures display different stages of processing:
+  - Initial grayscale, filtered, and reconstructed images.
+  - Tumor detection and localization using bounding boxes.
+  - Final classification output.
+
+### 11. Performance Metrics
+- Various performance metrics such as contrast, correlation, and texture features are calculated.
+- Tumor boundaries are detected, and images are visualized with these boundaries highlighted.
+
+The overall goal is to classify brain tumors using deep learning techniques and enhance detection through image preprocessing and object detection using YOLOv4.
