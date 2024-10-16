@@ -1,10 +1,17 @@
 Project Overview
 
-Brain tumors are among the leading causes of death and disability worldwide, as they impact the most vital organs in the human body. Brain cancer, which arises from malignant tumors, is the tenth leading cause of cancer-related mortality in both men and women. Not all brain tumors are cancerous, though; some are benign (non-cancerous). Glioma and meningioma are two well-known types of brain tumors. Due to their invasive nature, brain tumors can drastically affect patients' quality of life, as well as that of their loved ones, and are associated with a high mortality rate.
+Brain tumors are among the leading causes of death and disability worldwide, as they impact the most vital organs in the human body. 
+Brain cancer, which arises from malignant tumors, is the tenth leading cause of cancer-related mortality in both men and women. 
+Not all brain tumors are cancerous, though; some are benign (non-cancerous). Glioma and meningioma are two well-known types of brain tumors. 
+Due to their invasive nature, brain tumors can drastically affect patients' quality of life, as well as that of their loved ones, and are associated with a high mortality rate.
 
 Problem Statement
 
-Early and accurate detection of brain tumors is crucial for improving patient survival rates. Conventional imaging techniques used in medical diagnosis include computed tomography (CT) scans, magnetic resonance imaging (MRI), positron emission tomography (PET), ultrasound, and X-ray screenings. While these methods are effective, they also present significant drawbacks:
+Early and accurate detection of brain tumors is crucial for improving patient survival rates. Conventional imaging techniques used in 
+medical diagnosis include computed tomography (CT) scans, magnetic resonance imaging (MRI), positron emission tomography (PET), 
+ultrasound, and X-ray screenings. 
+
+While these methods are effective, they also present significant drawbacks:
 - High Radiation Exposure: Increased risk of cancer due to ionizing radiation.
 - Decreased Sensitivity: Reduced accuracy in detecting smaller or early-stage tumors.
 - High Costs: Expensive equipment and procedures, which may not be accessible to all.
@@ -12,11 +19,14 @@ Early and accurate detection of brain tumors is crucial for improving patient su
 
 Proposed Solution
 
-To overcome these limitations, an automated brain tumor detection and segmentation system is proposed, utilizing state-of-the-art deep learning-based object detection techniques. The system aims to enhance the accuracy and efficiency of tumor detection using MRI scans. The approach incorporates transfer learning to fine-tune a deep learning model, specifically targeting the identification of malignant tumors such as glioblastoma.
+To overcome these limitations, an automated brain tumor detection and segmentation system is proposed, utilizing state-of-the-art 
+deep learning-based object detection techniques. The system aims to enhance the accuracy and efficiency of tumor detection using MRI scans. 
+The approach incorporates transfer learning to fine-tune a deep learning model, specifically targeting the identification of malignant tumors such as glioblastoma.
 
 Technology and Methodology
 
-The project employs YOLO (You Only Look Once), a cutting-edge object detection framework that has proven effective in various computer vision tasks. The system uses **YOLOv4**, a novel deep learning architecture optimized for object detection, which offers the following benefits:
+The project employs YOLO (You Only Look Once), a cutting-edge object detection framework that has proven effective in various computer vision tasks. 
+The system uses YOLOv4, a novel deep learning architecture optimized for object detection, which offers the following benefits:
 - Reduced Computational Complexity: YOLOv4 requires fewer computational resources than other models, enabling faster processing while maintaining high detection accuracy.
 - End-to-End Learning: The YOLO framework performs detection and classification in a single step, making it suitable for real-time applications.
 - Improved Detection Capabilities: Capable of accurately identifying and localizing brain tumors in MRI images.
@@ -37,4 +47,7 @@ The project aims to create a robust brain tumor detection and classification sys
 
 Conclusion
 
-This project introduces a modern approach to brain tumor detection, leveraging the power of deep learning and the YOLOv4 framework to overcome the limitations of traditional diagnostic techniques. By automating the detection process, the proposed system aims to assist medical professionals in making quicker, more accurate diagnoses, ultimately improving the quality of life for patients.
+This project introduces a modern approach to brain tumor detection, leveraging the power of deep learning and 
+the YOLOv4 framework to overcome the limitations of traditional diagnostic techniques. By automating the detection process, 
+the proposed system aims to assist medical professionals in making quicker, more accurate diagnoses, ultimately improving the quality of life for patients.
+
