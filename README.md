@@ -6,4 +6,4 @@ However, traditional imaging methods have significant drawbacks, such as increas
 
 To address these challenges, an automated brain tumor detection and segmentation system has been developed using some of the most advanced deep learning-based object detection algorithms. This system employs transfer learning techniques for detecting malignant tumors, such as glioblastoma, through MRI scans.
 
-The cutting-edge object detection framework, YOLO (You Only Look Once), is utilized to identify and classify brain tumors through a deep learning approach. YOLOv4, a novel deep learning technique for object detection, offers reduced computational requirements compared to other models while
+The cutting-edge object detection framework, YOLO (You Only Look Once), is utilized to identify and classify brain tumors through a deep learning approach. YOLOv4, a novel deep learning technique for object detection, offers reduced computational requirements compared to other models.
